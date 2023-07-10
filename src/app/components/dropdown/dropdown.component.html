@@ -1,0 +1,12 @@
+
+<div ngbDropdown class="d-inline-block" id="dropdown">
+    <button type="button" class="btn btn_select" id="dropdownBasic1" ngbDropdownToggle>
+       <span> {{selectedOptionTitle ?  selectedOptionTitle : defaultSelectedOption}}</span>
+    </button>
+    <span type="button" class="pr_10" ngbDropdownToggle id="dropdownBasic1">
+        <img class="w_1"  src="{{arrow}}" alt="" >
+    </span>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+        <button ngbDropdownItem *ngFor="let item of data" (click)="selectOption(item)">{{item}}</button>
+    </div>
+</div>

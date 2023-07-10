@@ -1,0 +1,46 @@
+<div class="content"> 
+    
+    <div class="content-tile pb-2">
+        {{title}}
+    </div>
+
+    <div class="content-data alert card min_height" *ngIf="type === 'alert'">
+        <p class="pt-2 font_0">
+            {{data.whatHappened}}
+        </p>
+    </div>
+
+    <div class="content-data alert-region card" *ngIf="type === 'region'">
+        <div class="card third_card p_2">
+            <p *ngFor="let item of data.causeRegion" class="font_0"><span class=""><i class="arrow_down"></i></span> {{item}}</p>
+        </div>
+
+    </div>
+
+    <div class="content-data" *ngIf="type === 'reason'">
+
+        <div class="card third_card p_2">
+            <p *ngFor="let item of data.GPT_ouptut"   class="font_0"> - {{item}} </p>
+        </div>
+    </div>
+
+    <div class="content-data" *ngIf="type === 'status'">
+
+        <div class="status-container card">
+            <div class="status">
+                <span class="status-type">Closed</span>
+                <span>7 days ago</span>
+            </div>
+    
+            <div class="status-data">
+                <p>Comment : No reason for concern. Will recover as sales increase.</p>
+                <p>Comment by : CCDA Data analytics Approved by CFO</p>
+            </div>
+            <div class="col-12 text-center">
+                <a href="" > Open a JIRA Ticket </a>
+            </div>
+        </div>
+        
+    </div>
+
+</div>

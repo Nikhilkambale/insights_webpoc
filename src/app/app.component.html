@@ -1,0 +1,134 @@
+<div class="wrapper">
+  <div class="header-wrapper">
+    <div class="">
+      <app-header></app-header>
+    </div>
+  </div>
+
+
+  <div class="col-sm-12 bg_color">
+    <div class="p-3 flex_style_card" style="height: 2.7em; margin-bottom: 2em; overflow: hidden; margin-top: 6em; font-size: 1.4em;">
+    <div class="text-hover">
+      <ng-container *ngFor="let listData of keyInsigts; let i = index">
+        <p (click)="selectKeyInsight(i)" *ngIf="listData.serviceName === selectedService && listData.kpi === selectedKpi" class="d-flex pb-2 pt-2 clickable" href="#" style="font-size: 1em;"><span class=""><i
+          class="arrow_down"></i></span> {{listData.effect}}</p>
+      </ng-container>
+      
+    </div>
+    </div>
+    <div class="main-content">
+      <div class="content-chart comments">
+
+        <!-- side bar section starts -->
+      <div class="pt_3">
+
+        <div class="test">
+          <h6>Cluster</h6>  
+          <app-dropdown [data]="cluster" [defaultSelectedOption]="selectedCluster"   
+            (selectedOption)="updateSelectedCluster($event)" class=""></app-dropdown> 
+        </div>
+
+        <div class="test">
+          <h6>Service</h6>
+          <app-dropdown [data]="filteredService" [defaultSelectedOption]="selectedService" 
+            (selectedOption)="updateSelectedService($event)" class=""></app-dropdown>
+        </div>
+
+        <div class="test">
+          <h6>    KPI</h6>
+          <app-dropdown [data]="filteredKpi" [defaultSelectedOption]="selectedKpi" 
+            (selectedOption)="updateSelectedKpi($event)" class=""></app-dropdown>
+        </div>
+
+        <div class="test">  
+          <label for="startDate" class="label_style w_6 font_1">Start month:</label>  
+          <app-datepicker (dateChange)="onStartDateChange($event)"></app-datepicker>  
+        </div>        
+
+        <div class="test">  
+          <label for="endDate" class="label_style w_6 font_1">End month:</label>  
+          <app-datepicker (dateChange)="onEndDateChange($event)"></app-datepicker>  
+        </div>         
+
+      </div>
+      <!-- side bar section end -->
+
+      
+
+       <!-- content -->
+            <!-- graph starts -->
+
+            <div class="content2-chart">
+            <div class="flex_style_chart">
+              <div class="p-3 bg_black">
+                <ng-container *ngIf="chartData && selectedService && selectedKpi">
+                  <app-chart [selectedKpi]="selectedKpi" [startDate]="startDate" [endDate]="endDate" [selectedService]="selectedService" [chartData]="chartData"></app-chart> 
+                </ng-container>  
+              </div>        
+            </div>
+            <!-- graph ends -->
+
+            <!-- graph description starts -->
+            <div class="d-flex  second_row">
+              <div class="contents">
+                <app-content-block [title]="'Insight generated from various data sources'" [type]="'reason'" [data]="selectedKeyInsight"></app-content-block>
+              </div>
+            </div>
+          </div>
+
+            <!-- graph description ends -->
+            
+          
+    
+          
+    
+          <!-- <div class="d-flex third_row"></div> -->
+      
+
+
+
+      </div>
+
+     
+    </div>
+
+
+
+
+    <div class="trend comments">
+      <div class="">
+        <h5>Trends detected</h5>
+        <div class="">
+          <ng-container *ngFor="let listData of keyInsigts; let i = index">
+            <div class = "text-drop">
+            <p (click)="selectKeyInsight(i)" *ngIf="listData.serviceName === selectedService && listData.kpi === selectedKpi" class="d-flex pb-2 pt-2 clickable" href="#" style="font-size: 2em;"><span class=""><i
+              class="arrow_down"></i></span> {{listData.effect}}</p></div>
+          </ng-container>
+          
+        </div>
+      </div>
+    </div>
+   
+
+    <!-- Feedback section< -->
+    <div class="col-12 feedback">
+      <div class="comments">
+        <app-content-block [title]="'Feedback/Comments'" ></app-content-block>
+        <form id="feedbackSubmit" #feedbackSubmit = "ngForm" (ngSubmit) = "onClickSubmit(feedbackSubmit.value)">
+
+          <label for="name">Name :</label>
+          <input type="text" autocomplete="off" id="name" name="name" required ngModel>
+
+          <label for="review">Feedback:</label>
+          <textarea id="review" name="review" required ngModel></textarea>
+
+          <button type="submit" value="submit">Submit</button>
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<router-outlet></router-outlet>

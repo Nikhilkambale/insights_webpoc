@@ -1,0 +1,21 @@
+
+::ng-deep .date_picker .custom-select{
+    border: 1px solid black;
+    border-radius: 3px;
+}
+::ng-deep .date_picker .dropdown-menu.show{
+    padding-top: 1em !important;
+}
+.date_input {  
+    background-color: rgb(57, 56, 56);  
+    border: 1px solid #000;
+    color: #fff;  
+    margin-right: 0.6em;
+  }  
+    
+  .date_input::-webkit-calendar-picker-indicator {  
+    filter: invert(1);  
+  }
+  .test2{
+    height: 2.25em;
+  }

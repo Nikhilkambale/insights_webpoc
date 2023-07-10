@@ -1,0 +1,32 @@
+
+
+.search_input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 2.8em;
+}
+
+.bg_clr{
+    background:#2b2b2b
+}
+.search_field{
+background: transparent;
+border: none;
+}
+.search_field:focus{
+    outline: none !important;
+    caret-color: white;
+    color: white;
+}
+.search_icon{
+    width: 1.5em;
+    height: 1.5em;
+}
+.ml_4{
+    margin-left: 4.5em;
+}
+.header-content{
+    margin-left: 2em;
+}

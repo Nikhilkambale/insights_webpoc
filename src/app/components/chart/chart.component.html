@@ -1,0 +1,8 @@
+<div >
+    <div>
+        <p style="text-align: center;">{{selectedKpi}}</p>
+    </div>
+    <canvas height="260px" width="450px" class="canvas w_100 " baseChart [datasets]="barChartData"
+        [labels]="barChartLabels" [options]="barChartOptions" [colors]="barChartColors" [legend]="barChartLegend"
+        [chartType]="barChartType"></canvas>
+</div>

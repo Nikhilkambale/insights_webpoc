@@ -1,0 +1,26 @@
+<div class="feedback"> 
+    
+    <div class="feedback-tile pb-2">
+        {{title}}
+    </div>
+
+    <div class="feedback-data feedbacks card min_height" *ngIf="type === 'alert'">
+        <p class="pt-2 font_0">
+            {{data.feedbacks}}
+            <!-- """use let item of data.feedbacks in case of array type""" -->
+        </p>
+    </div>
+
+    <div class="content-data" *ngIf="type === 'status'">
+
+        <div class="status-container card">
+            <div class="status">
+                <span class="status-type">Closed</span>
+                <span>7 days ago</span>
+            </div>
+
+        </div>
+        
+    </div>
+
+</div>

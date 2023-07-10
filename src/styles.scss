@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    //  overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000 !important;
+}
+
+
+.content-wrapper {
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #999797; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #1e1e1e; 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #121212; 
+      }
+}
