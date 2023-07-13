@@ -1,0 +1,56 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "name": "Lara Stewart",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp",
+      "date": "June 27, 2023",
+      "heading": "Decline in User Rate ",
+      "description": "Problem statement: To identify the main reason why there is a decline in the user rate we have observed a continous dip in the user",
+      "image": "img1.jpg",
+      "views": 0,
+      "comments": 0,
+      "isFavorite": false,
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "name": "steve Smith",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp",
+      "date": "June 27, 2023",
+      "heading": "Customer Feedback Loop",
+      "description": "Problem Statement: To identify the main reason why there is a decline in the user rate we have observed a continous dip in the user",
+      "image": "img2.jpg",
+      "views": 0,
+      "comments": 0,
+      "isFavorite": false,
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "name": "Glenn Warner",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp",
+      "date": "June 27, 2023",
+      "heading": "Parking Measurement Campaign",
+      "description": "Problem Statement: To identify the main reason why there is a decline in the user rate we have observed a continous dip in the user",
+      "image": "img3.jpg",
+      "views": 0,
+      "comments": 0,
+      "isFavorite": false,
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "name": "Lara Stewart",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp",
+      "date": "June 27, 2023",
+      "heading": "Live Map Operation",
+      "description": "Problem Statement: To identify the main reason why there is a decline in the user rate we have observed a continous dip in the user",
+      "image": "img4.jpg",
+      "views": 0,
+      "comments": 0,
+      "isFavorite": false,
+      "likes": 0
+    }
+  ]
+}
